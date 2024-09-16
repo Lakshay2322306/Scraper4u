@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: telegram-bot
+    env: python
+    plan: free
+    buildCommand: 
+      - pip install -r requirements.txt
+    startCommand: 
+      - python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: your-telegram-bot-token
+      - key: TARGET_BOT_CHAT_ID
+        value: your-target-bot-chat-id
+      - key: OWNER_ID
+        value: "1984816095"  # Replace with actual owner ID
